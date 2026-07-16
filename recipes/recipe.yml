@@ -19,7 +19,8 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
-    #repos:
+    repos:
+      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
     #  copr:
     #    - atim/starship
     install:
@@ -28,6 +29,7 @@ modules:
         - '@virtualization'
         - docker
         - runc # serve a docker
+        - brave-browser
     #remove:
     #  packages:
         # example: removing firefox (in favor of the flatpak)
