@@ -27,6 +27,7 @@ modules:
         - distrobox
         - '@virtualization'
         - docker
+        - runc # serve a docker
     #remove:
     #  packages:
         # example: removing firefox (in favor of the flatpak)
