@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: gulpegaspe-os
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: OS image based on fedora kinoite. Added packages: italian language, @virtualization, docker, distrobox, brave-browser
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: quay.io/fedora-ostree-desktops/kinoite
@@ -20,7 +20,8 @@ modules:
 
   - type: dnf
     repos:
-      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+      files:
+          - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
     #  copr:
     #    - atim/starship
     install:
