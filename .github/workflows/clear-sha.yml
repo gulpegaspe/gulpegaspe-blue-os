@@ -1,1 +1,19 @@
+name: Delete packages without tag
 
+on:
+  workflow_dispatch: # Ti permette di avviarlo manualmente con un click
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+
+    steps:
+      - name: Find and delete orphaned images (sha256)
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'gulpegaspe-os'
+          package-type: 'container'
+          # Impostando a 'true', eliminerà solo i pacchetti privi di tag (i tuoi sha256)
+          delete-only-untagged-versions: 'true'
