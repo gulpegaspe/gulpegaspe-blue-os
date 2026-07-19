@@ -1,9 +1,9 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: gulpegaspe-os
+name: gulpegaspe-blue-os
 # description will be included in the image's metadata
-description: OS image based on fedora kinoite. Added packages -> italian language, @virtualization, docker, distrobox, brave-browser
+description: OS image based on fedora kinoite
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: quay.io/fedora-ostree-desktops/kinoite
